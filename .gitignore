@@ -1,0 +1,18 @@
+data/
+outputs/
+checkpoints/
+*.safetensors
+*.pt
+*.bin
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+.DS_Store
+
+# build artefacts / editor backups
+report/figures.zip
+report/main_v*_backup.tex
+*.zip
+
+# ...but every file under results/ is a committed deliverable
+!results/**

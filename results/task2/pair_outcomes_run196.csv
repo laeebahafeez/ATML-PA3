@@ -1,0 +1,15 @@
+suite,kind,category,pairs
+grounding,counting,"answers differ between the images, but at least one is wrong",7
+grounding,counting,"grounded: right for both images, and the swap moves each answer to the partner's",14
+grounding,counting,same answer for both images (image ignored),11
+grounding,presence,"grounded: right for both images, and the swap moves each answer to the partner's",30
+grounding,presence,same answer for both images (image ignored),2
+vqa,number,"answers differ between the images, but at least one is wrong",14
+vqa,number,"grounded: right for both images, and the swap moves each answer to the partner's",4
+vqa,number,same answer for both images (image ignored),6
+vqa,other,"answers differ between the images, but at least one is wrong",13
+vqa,other,"grounded: right for both images, and the swap moves each answer to the partner's",8
+vqa,other,same answer for both images (image ignored),15
+vqa,yes/no,"answers differ between the images, but at least one is wrong",3
+vqa,yes/no,"grounded: right for both images, and the swap moves each answer to the partner's",7
+vqa,yes/no,same answer for both images (image ignored),26

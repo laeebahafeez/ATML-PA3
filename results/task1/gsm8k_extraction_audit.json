@@ -1,0 +1,57 @@
+{
+  "baseline": {
+    "n": 1319,
+    "correct": 572,
+    "no_digit_extractions": 334,
+    "no_digit_%": 25.322213798332072,
+    "no_digit_values": {
+      "$$": 334
+    }
+  },
+  "full": {
+    "n": 1319,
+    "correct": 847,
+    "no_digit_extractions": 0,
+    "no_digit_%": 0.0,
+    "no_digit_values": {}
+  },
+  "full_u625": {
+    "n": 1319,
+    "correct": 746,
+    "no_digit_extractions": 0,
+    "no_digit_%": 0.0,
+    "no_digit_values": {}
+  },
+  "l2sp": {
+    "n": 1319,
+    "correct": 852,
+    "no_digit_extractions": 0,
+    "no_digit_%": 0.0,
+    "no_digit_values": {}
+  },
+  "lora16": {
+    "n": 1319,
+    "correct": 801,
+    "no_digit_extractions": 1,
+    "no_digit_%": 0.0758150113722517,
+    "no_digit_values": {
+      "[invalid]": 1
+    }
+  },
+  "lora4": {
+    "n": 1319,
+    "correct": 786,
+    "no_digit_extractions": 0,
+    "no_digit_%": 0.0,
+    "no_digit_values": {}
+  },
+  "oplora16": {
+    "n": 1319,
+    "correct": 822,
+    "no_digit_extractions": 1,
+    "no_digit_%": 0.0758150113722517,
+    "no_digit_values": {
+      "[invalid]": 1
+    }
+  }
+}

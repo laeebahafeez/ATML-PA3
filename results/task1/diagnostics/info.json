@@ -1,0 +1,10 @@
+{
+  "k": 128,
+  "layers": [
+    0,
+    13,
+    27
+  ],
+  "n_probe": 64,
+  "note": "dW for Full FT variants = W_trained - W0 (FP32 export); adapters = scale * B~ A~"
+}

@@ -1,0 +1,32 @@
+{
+  "logp": {
+    "top_minus_bottom_quartile_all": 0.07828125,
+    "top_minus_bottom_quartile_mixed": 0.13352878464818763,
+    "n_mixed_questions": 469,
+    "mean_spearman_with_correct_mixed": 0.13401181953820634,
+    "mean_spearman_with_length_mixed": 0.24548338556534138
+  },
+  "selfcert": {
+    "top_minus_bottom_quartile_all": 0.11984375,
+    "top_minus_bottom_quartile_mixed": 0.20442430703624734,
+    "n_mixed_questions": 469,
+    "mean_spearman_with_correct_mixed": 0.19804108649285113,
+    "mean_spearman_with_length_mixed": -0.1925934936321443
+  },
+  "length": {
+    "top_minus_bottom_quartile_all": -0.0459375,
+    "top_minus_bottom_quartile_mixed": -0.07835820895522388,
+    "n_mixed_questions": 469,
+    "mean_spearman_with_correct_mixed": -0.07632595054396821,
+    "mean_spearman_with_length_mixed": 1.0
+  },
+  "pool_stats": {
+    "mean_rollout_acc": 0.64453125,
+    "frac_all_correct": 0.3275,
+    "frac_none_correct": 0.08625,
+    "mean_len_correct": 533.9403030303031,
+    "mean_len_incorrect": 908.5273626373627,
+    "capped_rate": 0.0167578125,
+    "no_answer_rate": 0.01671875
+  }
+}

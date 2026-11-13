@@ -1,0 +1,29 @@
+suite,kind,pair,k,category,image,reference,pred_correct,pred_swap,pred_mismatched,pred_no_image
+grounding,counting,32,0,same answer for both images (image ignored),338562,1,2,2,0,2
+grounding,counting,32,1,same answer for both images (image ignored),542042,2,2,2,1,2
+grounding,counting,33,0,"answers differ between the images, but at least one is wrong",369461,1,2,1,1,1
+grounding,counting,33,1,"answers differ between the images, but at least one is wrong",440106,2,1,2,1,1
+grounding,counting,36,0,"grounded: right for both images, and the swap moves each answer to the partner's",185240,1,1,2,0,1
+grounding,counting,36,1,"grounded: right for both images, and the swap moves each answer to the partner's",554328,2,2,1,1,1
+grounding,presence,0,0,"grounded: right for both images, and the swap moves each answer to the partner's",572210,yes,yes,no,no,no
+grounding,presence,0,1,"grounded: right for both images, and the swap moves each answer to the partner's",487861,no,no,yes,no,no
+grounding,presence,5,0,same answer for both images (image ignored),528821,yes,yes,yes,no,no
+grounding,presence,5,1,same answer for both images (image ignored),310354,no,yes,yes,no,no
+vqa,number,36,0,"answers differ between the images, but at least one is wrong",199003,3,3,2,2,1
+vqa,number,36,1,"answers differ between the images, but at least one is wrong",199849,6,2,3,2,1
+vqa,number,39,0,same answer for both images (image ignored),37389,2,1,1,1,1
+vqa,number,39,1,same answer for both images (image ignored),7297,1,1,1,1,1
+vqa,number,42,0,"grounded: right for both images, and the swap moves each answer to the partner's",24260,2,2,1,1,1
+vqa,number,42,1,"grounded: right for both images, and the swap moves each answer to the partner's",464633,1,1,2,0,1
+vqa,other,60,0,same answer for both images (image ignored),459721,white,white,white,white,blue
+vqa,other,60,1,same answer for both images (image ignored),68435,red,white,white,white,blue
+vqa,other,62,0,"answers differ between the images, but at least one is wrong",80172,blonde,brown,black,black,brown
+vqa,other,62,1,"answers differ between the images, but at least one is wrong",247407,brown,black,brown,black,brown
+vqa,other,66,0,"grounded: right for both images, and the swap moves each answer to the partner's",422383,male,male,female,male,female
+vqa,other,66,1,"grounded: right for both images, and the swap moves each answer to the partner's",199602,female,female,male,male,female
+vqa,yes/no,0,0,same answer for both images (image ignored),546826,no,yes,yes,no,yes
+vqa,yes/no,0,1,same answer for both images (image ignored),392850,yes,yes,yes,no,yes
+vqa,yes/no,1,0,"answers differ between the images, but at least one is wrong",48376,no,yes,no,yes,yes
+vqa,yes/no,1,1,"answers differ between the images, but at least one is wrong",391090,yes,no,yes,no,yes
+vqa,yes/no,4,0,"grounded: right for both images, and the swap moves each answer to the partner's",18485,no,no,yes,no,no
+vqa,yes/no,4,1,"grounded: right for both images, and the swap moves each answer to the partner's",17095,yes,yes,no,no,no

@@ -1,0 +1,45 @@
+{
+ "batch_size": {
+  "baseline": "32",
+  "full_u625": "32",
+  "full": "32",
+  "l2sp": "32",
+  "lora4": "32",
+  "lora16": "32",
+  "oplora16": "32"
+ },
+ "bs1_vs_bs32": {
+  "baseline": {
+   "n": 1319,
+   "bs1_%": 43.06292645943897,
+   "bs32_%": 43.366186504927974,
+   "identical_responses": 1126,
+   "wrong_to_right": 14,
+   "right_to_wrong": 10
+  },
+  "full_u625": {
+   "n": 1319,
+   "bs1_%": 56.330553449583014,
+   "bs32_%": 56.55799848369977,
+   "identical_responses": 1260,
+   "wrong_to_right": 5,
+   "right_to_wrong": 2
+  },
+  "full": {
+   "n": 1319,
+   "bs1_%": 64.13949962092494,
+   "bs32_%": 64.2153146322972,
+   "identical_responses": 1265,
+   "wrong_to_right": 3,
+   "right_to_wrong": 2
+  },
+  "l2sp": {
+   "n": 1319,
+   "bs1_%": 64.6702047005307,
+   "bs32_%": 64.59438968915845,
+   "identical_responses": 1267,
+   "wrong_to_right": 2,
+   "right_to_wrong": 3
+  }
+ }
+}

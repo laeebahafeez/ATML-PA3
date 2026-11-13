@@ -1,0 +1,15 @@
+{
+  "model": "google/siglip-base-patch16-224",
+  "n_images": 9270,
+  "shape": [
+    9270,
+    196,
+    768
+  ],
+  "dtype": "float16",
+  "download_seconds": 73.86546874046326,
+  "encode_seconds": 148.37056350708008,
+  "peak_mem_bytes": 494182912,
+  "bytes": 2790789248,
+  "preprocessing": "SiglipImageProcessor defaults (224x224 bicubic resize, rescale, mean/std 0.5)"
+}

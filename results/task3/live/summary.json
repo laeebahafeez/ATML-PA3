@@ -1,0 +1,75 @@
+{
+  "summary": [
+    {
+      "strategy": "parallel",
+      "accuracy": 0.54,
+      "mean_input_tokens": 325.14,
+      "mean_output_tokens": 1857.02,
+      "mean_seconds": 100.41312781020005,
+      "truncation_rate": 0.26,
+      "extraction_rate": 0.78
+    },
+    {
+      "strategy": "refine",
+      "accuracy": 0.62,
+      "mean_input_tokens": 889.62,
+      "mean_output_tokens": 1216.94,
+      "mean_seconds": 66.25481465558006,
+      "truncation_rate": 0.2,
+      "extraction_rate": 1.0
+    },
+    {
+      "strategy": "single",
+      "accuracy": 0.62,
+      "mean_input_tokens": 108.38,
+      "mean_output_tokens": 760.36,
+      "mean_seconds": 41.50757350759998,
+      "truncation_rate": 0.04,
+      "extraction_rate": 0.96
+    }
+  ],
+  "per_call": [
+    {
+      "kind": "parallel",
+      "call_truncation": 0.16666666666666666,
+      "call_extraction": 0.8333333333333334,
+      "call_output_tokens": 619.0066666666667
+    },
+    {
+      "kind": "refine",
+      "call_truncation": 0.0,
+      "call_extraction": 1.0,
+      "call_output_tokens": 582.08
+    },
+    {
+      "kind": "single",
+      "call_truncation": 0.04,
+      "call_extraction": 0.96,
+      "call_output_tokens": 760.36
+    }
+  ],
+  "bootstrap_acc_diff": {
+    "parallel-single": [
+      -0.08,
+      -0.2,
+      0.06
+    ],
+    "refine-single": [
+      0.0,
+      -0.14,
+      0.12
+    ],
+    "refine-parallel": [
+      0.08,
+      -0.02,
+      0.18
+    ]
+  },
+  "transitions": {
+    "C->C": 28,
+    "W->W": 19,
+    "W->C": 3
+  },
+  "refine_answer_changed_rate": 0.2,
+  "initial_accuracy": 0.56
+}

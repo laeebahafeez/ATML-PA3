@@ -1,0 +1,30 @@
+{
+  "baseline": {
+    "gained": 0,
+    "lost": 0
+  },
+  "full_u625": {
+    "gained": 322,
+    "lost": 148
+  },
+  "full": {
+    "gained": 378,
+    "lost": 103
+  },
+  "l2sp": {
+    "gained": 379,
+    "lost": 99
+  },
+  "lora4": {
+    "gained": 342,
+    "lost": 128
+  },
+  "lora16": {
+    "gained": 359,
+    "lost": 130
+  },
+  "oplora16": {
+    "gained": 372,
+    "lost": 122
+  }
+}

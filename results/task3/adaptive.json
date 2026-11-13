@@ -1,0 +1,604 @@
+{
+  "math": {
+    "quality_signal": "selfcert",
+    "dev_grid": {
+      "agreement": [
+        {
+          "policy": "fixed32",
+          "tau": null,
+          "gamma": null,
+          "acc": 0.825,
+          "cost": 18322.4,
+          "rollouts": 32.0
+        },
+        {
+          "policy": "agreement",
+          "tau": 0.5,
+          "gamma": null,
+          "acc": 0.8145,
+          "cost": 5052.79,
+          "rollouts": 6.648
+        },
+        {
+          "policy": "agreement",
+          "tau": 0.625,
+          "gamma": null,
+          "acc": 0.8260000000000001,
+          "cost": 7088.955499999999,
+          "rollouts": 9.15
+        },
+        {
+          "policy": "agreement",
+          "tau": 0.75,
+          "gamma": null,
+          "acc": 0.8260000000000001,
+          "cost": 7717.453,
+          "rollouts": 10.114
+        },
+        {
+          "policy": "agreement",
+          "tau": 0.875,
+          "gamma": null,
+          "acc": 0.826,
+          "cost": 9980.345500000001,
+          "rollouts": 13.648
+        },
+        {
+          "policy": "agreement",
+          "tau": 1.0,
+          "gamma": null,
+          "acc": 0.826,
+          "cost": 10848.273000000001,
+          "rollouts": 15.172
+        }
+      ],
+      "quality": [
+        {
+          "policy": "fixed32",
+          "tau": null,
+          "gamma": null,
+          "acc": 0.825,
+          "cost": 18322.4,
+          "rollouts": 32.0
+        },
+        {
+          "policy": "quality",
+          "tau": 0.5,
+          "gamma": 0.0,
+          "acc": 0.8215,
+          "cost": 5481.818499999999,
+          "rollouts": 7.156000000000001
+        },
+        {
+          "policy": "quality",
+          "tau": 0.5,
+          "gamma": 0.1,
+          "acc": 0.8215,
+          "cost": 11268.8775,
+          "rollouts": 20.82
+        },
+        {
+          "policy": "quality",
+          "tau": 0.5,
+          "gamma": 0.25,
+          "acc": 0.82,
+          "cost": 11641.2175,
+          "rollouts": 21.338
+        },
+        {
+          "policy": "quality",
+          "tau": 0.5,
+          "gamma": 0.5,
+          "acc": 0.821,
+          "cost": 12746.452000000001,
+          "rollouts": 22.926
+        },
+        {
+          "policy": "quality",
+          "tau": 0.625,
+          "gamma": 0.0,
+          "acc": 0.8265,
+          "cost": 7129.350000000001,
+          "rollouts": 9.22
+        },
+        {
+          "policy": "quality",
+          "tau": 0.625,
+          "gamma": 0.1,
+          "acc": 0.8255000000000001,
+          "cost": 12859.897000000003,
+          "rollouts": 22.822
+        },
+        {
+          "policy": "quality",
+          "tau": 0.625,
+          "gamma": 0.25,
+          "acc": 0.8245,
+          "cost": 12906.877999999999,
+          "rollouts": 22.906
+        },
+        {
+          "policy": "quality",
+          "tau": 0.625,
+          "gamma": 0.5,
+          "acc": 0.8234999999999999,
+          "cost": 13517.585499999997,
+          "rollouts": 23.851999999999997
+        },
+        {
+          "policy": "quality",
+          "tau": 0.75,
+          "gamma": 0.0,
+          "acc": 0.8265,
+          "cost": 7756.0555,
+          "rollouts": 10.175999999999998
+        },
+        {
+          "policy": "quality",
+          "tau": 0.75,
+          "gamma": 0.1,
+          "acc": 0.8255,
+          "cost": 13642.976499999999,
+          "rollouts": 23.982
+        },
+        {
+          "policy": "quality",
+          "tau": 0.75,
+          "gamma": 0.25,
+          "acc": 0.825,
+          "cost": 13656.294499999996,
+          "rollouts": 24.01
+        },
+        {
+          "policy": "quality",
+          "tau": 0.75,
+          "gamma": 0.5,
+          "acc": 0.8234999999999999,
+          "cost": 13979.155499999999,
+          "rollouts": 24.555999999999997
+        },
+        {
+          "policy": "quality",
+          "tau": 0.875,
+          "gamma": 0.0,
+          "acc": 0.826,
+          "cost": 9980.345500000001,
+          "rollouts": 13.648
+        },
+        {
+          "policy": "quality",
+          "tau": 0.875,
+          "gamma": 0.1,
+          "acc": 0.825,
+          "cost": 15989.0445,
+          "rollouts": 27.72
+        },
+        {
+          "policy": "quality",
+          "tau": 0.875,
+          "gamma": 0.25,
+          "acc": 0.825,
+          "cost": 15989.0445,
+          "rollouts": 27.72
+        },
+        {
+          "policy": "quality",
+          "tau": 0.875,
+          "gamma": 0.5,
+          "acc": 0.825,
+          "cost": 15989.0445,
+          "rollouts": 27.72
+        },
+        {
+          "policy": "quality",
+          "tau": 1.0,
+          "gamma": 0.0,
+          "acc": 0.826,
+          "cost": 10848.273000000001,
+          "rollouts": 15.172
+        },
+        {
+          "policy": "quality",
+          "tau": 1.0,
+          "gamma": 0.1,
+          "acc": 0.825,
+          "cost": 18322.4,
+          "rollouts": 32.0
+        },
+        {
+          "policy": "quality",
+          "tau": 1.0,
+          "gamma": 0.25,
+          "acc": 0.825,
+          "cost": 18322.4,
+          "rollouts": 32.0
+        },
+        {
+          "policy": "quality",
+          "tau": 1.0,
+          "gamma": 0.5,
+          "acc": 0.825,
+          "cost": 18322.4,
+          "rollouts": 32.0
+        }
+      ]
+    },
+    "selected": {
+      "agreement": {
+        "policy": "agreement",
+        "tau": 0.625,
+        "gamma": null,
+        "dev": {
+          "acc": 0.8260000000000001,
+          "cost": 7088.955499999999,
+          "rollouts": 9.15
+        }
+      },
+      "quality": {
+        "policy": "quality",
+        "tau": 0.5,
+        "gamma": 0.0,
+        "dev": {
+          "acc": 0.8215,
+          "cost": 5481.818499999999,
+          "rollouts": 7.156000000000001
+        }
+      }
+    },
+    "eval": {
+      "agreement": {
+        "acc": 0.736375,
+        "cost": 10139.980999999998,
+        "rollouts": 11.824000000000002,
+        "stop_distribution": {
+          "4": 0.66275,
+          "8": 0.058625,
+          "16": 0.01325,
+          "32": 0.265375
+        },
+        "early_stops": 5877,
+        "early_incorrect": 660,
+        "early_incorrect_recoverable_by_fixed32": 51,
+        "early_correct_but_fixed32_wrong": 39,
+        "acc_diff_vs_fixed32_ci": [
+          -0.0014999999999999987,
+          -0.004999999999999999,
+          0.0016281249999999983
+        ]
+      },
+      "quality": {
+        "acc": 0.731875,
+        "cost": 7658.0242499999995,
+        "rollouts": 9.000499999999999,
+        "stop_distribution": {
+          "4": 0.763625,
+          "8": 0.0585,
+          "16": 0.013375,
+          "32": 0.1645
+        },
+        "early_stops": 6684,
+        "early_incorrect": 1153,
+        "early_incorrect_recoverable_by_fixed32": 131,
+        "early_correct_but_fixed32_wrong": 83,
+        "acc_diff_vs_fixed32_ci": [
+          -0.005999999999999998,
+          -0.012003125,
+          -0.00012499999999999816
+        ]
+      },
+      "fixed32": {
+        "acc": 0.737875,
+        "cost": 21347.0175,
+        "rollouts": 32.0,
+        "stop_distribution": {
+          "32": 1.0
+        },
+        "early_stops": 0,
+        "early_incorrect": 0,
+        "early_incorrect_recoverable_by_fixed32": 0,
+        "early_correct_but_fixed32_wrong": 0
+      }
+    }
+  },
+  "mathvista": {
+    "quality_signal": "visconf",
+    "dev_grid": {
+      "agreement": [
+        {
+          "policy": "fixed32",
+          "tau": null,
+          "gamma": null,
+          "acc": 0.6375,
+          "cost": 9217.485,
+          "rollouts": 32.0
+        },
+        {
+          "policy": "agreement",
+          "tau": 0.5,
+          "gamma": null,
+          "acc": 0.6355000000000001,
+          "cost": 3447.7385,
+          "rollouts": 9.094000000000001
+        },
+        {
+          "policy": "agreement",
+          "tau": 0.625,
+          "gamma": null,
+          "acc": 0.643,
+          "cost": 5120.6605,
+          "rollouts": 13.741999999999997
+        },
+        {
+          "policy": "agreement",
+          "tau": 0.75,
+          "gamma": null,
+          "acc": 0.64,
+          "cost": 5540.093000000001,
+          "rollouts": 15.026000000000002
+        },
+        {
+          "policy": "agreement",
+          "tau": 0.875,
+          "gamma": null,
+          "acc": 0.637,
+          "cost": 7026.431499999999,
+          "rollouts": 20.107999999999997
+        },
+        {
+          "policy": "agreement",
+          "tau": 1.0,
+          "gamma": null,
+          "acc": 0.637,
+          "cost": 7412.8330000000005,
+          "rollouts": 21.892
+        }
+      ],
+      "quality": [
+        {
+          "policy": "fixed32",
+          "tau": null,
+          "gamma": null,
+          "acc": 0.6375,
+          "cost": 9217.485,
+          "rollouts": 32.0
+        },
+        {
+          "policy": "quality",
+          "tau": 0.5,
+          "gamma": 0.0,
+          "acc": 0.639,
+          "cost": 3864.5290000000005,
+          "rollouts": 10.436
+        },
+        {
+          "policy": "quality",
+          "tau": 0.5,
+          "gamma": 0.1,
+          "acc": 0.6389999999999999,
+          "cost": 5200.5575,
+          "rollouts": 17.781999999999996
+        },
+        {
+          "policy": "quality",
+          "tau": 0.5,
+          "gamma": 0.25,
+          "acc": 0.639,
+          "cost": 5502.625,
+          "rollouts": 18.76
+        },
+        {
+          "policy": "quality",
+          "tau": 0.5,
+          "gamma": 0.5,
+          "acc": 0.6409999999999999,
+          "cost": 6495.5315,
+          "rollouts": 21.698
+        },
+        {
+          "policy": "quality",
+          "tau": 0.625,
+          "gamma": 0.0,
+          "acc": 0.642,
+          "cost": 5185.9725,
+          "rollouts": 13.992
+        },
+        {
+          "policy": "quality",
+          "tau": 0.625,
+          "gamma": 0.1,
+          "acc": 0.6409999999999999,
+          "cost": 6376.458500000001,
+          "rollouts": 20.99
+        },
+        {
+          "policy": "quality",
+          "tau": 0.625,
+          "gamma": 0.25,
+          "acc": 0.6405,
+          "cost": 6432.397,
+          "rollouts": 21.214000000000002
+        },
+        {
+          "policy": "quality",
+          "tau": 0.625,
+          "gamma": 0.5,
+          "acc": 0.6409999999999999,
+          "cost": 6905.9625,
+          "rollouts": 22.818
+        },
+        {
+          "policy": "quality",
+          "tau": 0.75,
+          "gamma": 0.0,
+          "acc": 0.6395000000000001,
+          "cost": 5642.8965,
+          "rollouts": 15.352
+        },
+        {
+          "policy": "quality",
+          "tau": 0.75,
+          "gamma": 0.1,
+          "acc": 0.6385000000000001,
+          "cost": 6909.9085,
+          "rollouts": 22.55
+        },
+        {
+          "policy": "quality",
+          "tau": 0.75,
+          "gamma": 0.25,
+          "acc": 0.6385000000000001,
+          "cost": 6919.491,
+          "rollouts": 22.626000000000005
+        },
+        {
+          "policy": "quality",
+          "tau": 0.75,
+          "gamma": 0.5,
+          "acc": 0.6405,
+          "cost": 7193.4884999999995,
+          "rollouts": 23.622
+        },
+        {
+          "policy": "quality",
+          "tau": 0.875,
+          "gamma": 0.0,
+          "acc": 0.637,
+          "cost": 7026.431499999999,
+          "rollouts": 20.107999999999997
+        },
+        {
+          "policy": "quality",
+          "tau": 0.875,
+          "gamma": 0.1,
+          "acc": 0.6375,
+          "cost": 8275.4455,
+          "rollouts": 27.36
+        },
+        {
+          "policy": "quality",
+          "tau": 0.875,
+          "gamma": 0.25,
+          "acc": 0.6375,
+          "cost": 8275.4455,
+          "rollouts": 27.36
+        },
+        {
+          "policy": "quality",
+          "tau": 0.875,
+          "gamma": 0.5,
+          "acc": 0.6375,
+          "cost": 8275.4455,
+          "rollouts": 27.36
+        },
+        {
+          "policy": "quality",
+          "tau": 1.0,
+          "gamma": 0.0,
+          "acc": 0.637,
+          "cost": 7412.8330000000005,
+          "rollouts": 21.892
+        },
+        {
+          "policy": "quality",
+          "tau": 1.0,
+          "gamma": 0.1,
+          "acc": 0.6375,
+          "cost": 9217.485,
+          "rollouts": 32.0
+        },
+        {
+          "policy": "quality",
+          "tau": 1.0,
+          "gamma": 0.25,
+          "acc": 0.6375,
+          "cost": 9217.485,
+          "rollouts": 32.0
+        },
+        {
+          "policy": "quality",
+          "tau": 1.0,
+          "gamma": 0.5,
+          "acc": 0.6375,
+          "cost": 9217.485,
+          "rollouts": 32.0
+        }
+      ]
+    },
+    "selected": {
+      "agreement": {
+        "policy": "agreement",
+        "tau": 0.5,
+        "gamma": null,
+        "dev": {
+          "acc": 0.6355000000000001,
+          "cost": 3447.7385,
+          "rollouts": 9.094000000000001
+        }
+      },
+      "quality": {
+        "policy": "quality",
+        "tau": 0.5,
+        "gamma": 0.0,
+        "dev": {
+          "acc": 0.639,
+          "cost": 3864.5290000000005,
+          "rollouts": 10.436
+        }
+      }
+    },
+    "eval": {
+      "agreement": {
+        "acc": 0.63125,
+        "cost": 3028.5165,
+        "rollouts": 8.8645,
+        "stop_distribution": {
+          "4": 0.750125,
+          "8": 0.07525,
+          "16": 0.020375,
+          "32": 0.15425
+        },
+        "early_stops": 6766,
+        "early_incorrect": 1930,
+        "early_incorrect_recoverable_by_fixed32": 333,
+        "early_correct_but_fixed32_wrong": 257,
+        "acc_diff_vs_fixed32_ci": [
+          -0.009499999999999998,
+          -0.020253124999999993,
+          0.0007531249999999995
+        ]
+      },
+      "quality": {
+        "acc": 0.63575,
+        "cost": 3383.5275,
+        "rollouts": 10.04,
+        "stop_distribution": {
+          "4": 0.683,
+          "8": 0.09825,
+          "16": 0.029875,
+          "32": 0.188875
+        },
+        "early_stops": 6489,
+        "early_incorrect": 1709,
+        "early_incorrect_recoverable_by_fixed32": 262,
+        "early_correct_but_fixed32_wrong": 222,
+        "acc_diff_vs_fixed32_ci": [
+          -0.0049999999999999975,
+          -0.014631249999999998,
+          0.003750000000000001
+        ]
+      },
+      "fixed32": {
+        "acc": 0.6407499999999999,
+        "cost": 8897.7575,
+        "rollouts": 32.0,
+        "stop_distribution": {
+          "32": 1.0
+        },
+        "early_stops": 0,
+        "early_incorrect": 0,
+        "early_incorrect_recoverable_by_fixed32": 0,
+        "early_correct_but_fixed32_wrong": 0
+      }
+    }
+  }
+}

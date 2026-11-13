@@ -1,0 +1,54 @@
+{
+  "stages": {
+    "caption": {
+      "trainable_params": 1837056,
+      "connector_params": 1837056,
+      "lora_params": 0,
+      "seconds": 1330.9929282665253,
+      "peak_mem_bytes": 1577362432,
+      "mixture_counts_end": {
+        "caption": 36000
+      }
+    },
+    "instruct": {
+      "trainable_params": 6424576,
+      "connector_params": 1837056,
+      "lora_params": 4587520,
+      "seconds": 1435.582841873169,
+      "peak_mem_bytes": 1573497344,
+      "mixture_counts_end": {
+        "caption": 38925,
+        "presence": 5993,
+        "counting": 3082
+      }
+    },
+    "vqa": {
+      "trainable_params": 6424576,
+      "connector_params": 1837056,
+      "lora_params": 4587520,
+      "seconds": 714.2453339099884,
+      "peak_mem_bytes": 1543871488,
+      "mixture_counts_end": {
+        "caption": 39541,
+        "presence": 6582,
+        "counting": 3679,
+        "vqa": 4198
+      }
+    }
+  },
+  "skipped_updates": [
+    1,
+    2,
+    4,
+    5,
+    16,
+    29
+  ],
+  "train_seconds": 3481.075820684433,
+  "calibration": {
+    "text_embed_mean_norm": 0.8339431881904602,
+    "connector_init_mean_norm": 11.448883056640625,
+    "scale": 0.07284057140350342,
+    "rule": "scale = mean ||text input embedding|| over caption tokens of 256 training captions / mean ||connector output|| at initialization over those images' patches"
+  }
+}

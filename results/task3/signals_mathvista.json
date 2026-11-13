@@ -1,0 +1,62 @@
+{
+  "logp": {
+    "top_minus_bottom_quartile_all": 0.020625,
+    "top_minus_bottom_quartile_mixed": 0.025821596244131457,
+    "n_mixed_questions": 639,
+    "mean_spearman_with_correct_mixed": 0.03423682717272213,
+    "mean_spearman_with_length_mixed": 0.3555165912246156
+  },
+  "selfcert": {
+    "top_minus_bottom_quartile_all": 0.036875,
+    "top_minus_bottom_quartile_mixed": 0.04616588419405321,
+    "n_mixed_questions": 639,
+    "mean_spearman_with_correct_mixed": 0.04953139360475587,
+    "mean_spearman_with_length_mixed": 0.35083601337341414
+  },
+  "length": {
+    "top_minus_bottom_quartile_all": -0.035625,
+    "top_minus_bottom_quartile_mixed": -0.04460093896713615,
+    "n_mixed_questions": 639,
+    "mean_spearman_with_correct_mixed": -0.04382167979404469,
+    "mean_spearman_with_length_mixed": 1.0
+  },
+  "vision": {
+    "top_minus_bottom_quartile_all": 0.03546875,
+    "top_minus_bottom_quartile_mixed": 0.04440532081377152,
+    "n_mixed_questions": 639,
+    "mean_spearman_with_correct_mixed": 0.03684807873079405,
+    "mean_spearman_with_length_mixed": -0.6876972745321897
+  },
+  "visconf": {
+    "top_minus_bottom_quartile_all": 0.07296875,
+    "top_minus_bottom_quartile_mixed": 0.09135367762128326,
+    "n_mixed_questions": 639,
+    "mean_spearman_with_correct_mixed": 0.08723934335324508,
+    "mean_spearman_with_length_mixed": -0.2898151972798796
+  },
+  "visconf_token": {
+    "top_minus_bottom_quartile_all": 0.0715625,
+    "top_minus_bottom_quartile_mixed": 0.08959311424100157,
+    "n_mixed_questions": 639,
+    "mean_spearman_with_correct_mixed": 0.07908799634366295,
+    "mean_spearman_with_length_mixed": -0.32997202143183946
+  },
+  "confidence_vision_corr": {
+    "mean_over_questions": -0.21099388018711665,
+    "median": -0.2115446326639862,
+    "frac_questions_positive": 0.10625,
+    "q25": -0.30552109031137253,
+    "q75": -0.09386758834557993,
+    "mean_Ztoken_minus_Z": -0.0022433811420689005,
+    "max_cov_identity_error": 5.117434254131581e-17
+  },
+  "pool_stats": {
+    "mean_rollout_acc": 0.5465234375,
+    "frac_all_correct": 0.10375,
+    "frac_none_correct": 0.0975,
+    "mean_len_correct": 219.62454434993924,
+    "mean_len_incorrect": 348.47437333103625,
+    "capped_rate": 0.015078125,
+    "no_answer_rate": 0.0972265625
+  }
+}

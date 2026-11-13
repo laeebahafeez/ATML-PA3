@@ -1,0 +1,30 @@
+[
+  {
+    "run": "run196",
+    "train_hours_total": 1.8027580790387259,
+    "skipped_updates": 6,
+    "eval_peak_mem_GB": 2.063999488,
+    "gen_seconds_per_answer_mean": 0.037629676209308606,
+    "connector_scale": 0.052662257105112076,
+    "scale_rule": "scale = mean ||text input embedding|| over caption tokens of 256 training captions / mean ||connector output|| at initialization over those images' patches",
+    "feature_download_min": 1.2310911456743876,
+    "feature_encode_min": 2.472842725118001,
+    "feature_peak_mem_GB": 0.494182912,
+    "feature_cache_GB": 2.790789248,
+    "n_images": 9270
+  },
+  {
+    "run": "run49",
+    "train_hours_total": 0.9669655057456759,
+    "skipped_updates": 6,
+    "eval_peak_mem_GB": 1.53999616,
+    "gen_seconds_per_answer_mean": 0.02522504508333127,
+    "connector_scale": 0.07284057140350342,
+    "scale_rule": "scale = mean ||text input embedding|| over caption tokens of 256 training captions / mean ||connector output|| at initialization over those images' patches",
+    "feature_download_min": 1.2310911456743876,
+    "feature_encode_min": 2.472842725118001,
+    "feature_peak_mem_GB": 0.494182912,
+    "feature_cache_GB": 2.790789248,
+    "n_images": 9270
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "text_embed_mean_norm": 0.8339431881904602,
+  "connector_init_mean_norm": 11.448883056640625,
+  "scale": 0.07284057140350342,
+  "rule": "scale = mean ||text input embedding|| over caption tokens of 256 training captions / mean ||connector output|| at initialization over those images' patches"
+}

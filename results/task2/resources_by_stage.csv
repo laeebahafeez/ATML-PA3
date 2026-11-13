@@ -1,0 +1,7 @@
+run,stage,trainable_params,connector_params,lora_params,train_minutes,peak_mem_GB,draws_at_stage_end
+run196,caption,1837056,1837056,0,49.53280651172002,1.656888832,"{""caption"": 36000}"
+run196,instruct,6424576,1837056,4587520,39.203932289282484,1.68143616,"{""caption"": 38925, ""presence"": 5993, ""counting"": 3082}"
+run196,vqa,6424576,1837056,4587520,19.424732422828676,1.681336832,"{""caption"": 39541, ""presence"": 6582, ""counting"": 3679, ""vqa"": 4198}"
+run49,caption,1837056,1837056,0,22.183215471108756,1.577362432,"{""caption"": 36000}"
+run49,instruct,6424576,1837056,4587520,23.92638069788615,1.573497344,"{""caption"": 38925, ""presence"": 5993, ""counting"": 3082}"
+run49,vqa,6424576,1837056,4587520,11.904088898499806,1.543871488,"{""caption"": 39541, ""presence"": 6582, ""counting"": 3679, ""vqa"": 4198}"

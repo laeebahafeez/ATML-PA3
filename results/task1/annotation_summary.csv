@@ -1,0 +1,8 @@
+condition,label,responses,json_valid,template_exact,coherent_and_relevant,degenerate,severe_repetition,math_framing,truncated,inappropriate
+baseline,Baseline,6,2/2,1/2,3,0,0,0,0,0
+full_u625,Full FT (mid),6,1/2,1/2,1,2,3,2,3,0
+full,Full FT,6,1/2,1/2,3,0,0,4,0,0
+l2sp,Full FT + L2-SP,6,1/2,0/2,3,0,0,5,0,0
+lora4,LoRA-4,6,1/2,2/2,3,0,1,0,0,0
+lora16,LoRA-16,6,1/2,1/2,2,0,2,1,0,0
+oplora16,OPLoRA-16,6,1/2,0/2,2,0,1,2,1,0

@@ -1,0 +1,23 @@
+# Python 3.10+. Training and generation need a CUDA GPU; all analysis and
+# figure scripts run on CPU.
+torch>=2.4
+transformers==4.57.1
+datasets>=3.0
+safetensors
+accelerate
+lm_eval==0.4.13
+math-verify==0.9.0
+pyyaml
+numpy
+pandas
+pyarrow
+scipy
+matplotlib
+pillow
+
+# Optional: faster Task 1 benchmark decoding via `--backend vllm`
+# (the `hf` backend needs no extra install).
+# vllm>=0.6
+
+# Tests
+pytest
