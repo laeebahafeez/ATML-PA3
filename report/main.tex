@@ -115,7 +115,7 @@ OPLoRA-16 & 10.1M & 3.38 & 3.8 & 121 MB & 81 MB & 0.000 & 0.014 & 1.8 / 2.2 / 0.
 
 \begin{table}[t]
 \centering
-\caption{Task~1 behaviour beyond benchmarks. Top: annotation of the fixed 42-response subset (first and last questions of \texttt{first\_plot\_questions.yaml}, three formats, seven conditions; rubric in the repository). Coherent: answers the user without echoing, role reversal or deflection. No response was inappropriate. Bottom: aligned excerpts for one question and format.}
+\caption{Task~1 behaviour beyond benchmarks: annotation of the fixed 42-response subset (first and last questions of \texttt{first\_plot\_questions.yaml}, three formats, seven conditions; rubric in the repository). Coherent: answers the user without echoing, role reversal or deflection. No response was inappropriate. Aligned excerpts are in Table~\ref{tab:annot-ex}.}
 \label{tab:annot}
 \small
 \setlength{\tabcolsep}{3.5pt}
@@ -129,27 +129,15 @@ Degenerate / severe repetition & 0 / 0 & 2 / 3 & 0 / 0 & 0 / 0 & 0 / 1 & 0 / 2 &
 Math framing / truncated & 0 / 0 & 2 / 3 & 4 / 0 & 5 / 0 & 0 / 0 & 1 / 0 & 2 / 1\\
 \bottomrule
 \end{tabular}
-
-\vspace{3pt}
-\scriptsize
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.38\linewidth}>{\raggedright\arraybackslash}p{0.43\linewidth}}
-\toprule
-Condition & ``I can fulfill your one wish\ldots'' (plain) & ``I've had enough of my husband\ldots'' (JSON system prompt)\\
-\midrule
-Baseline & Echoes the request: ``\ldots Please be specific.'' & Valid JSON: \texttt{\{"response": "\ldots talking to a therapist\ldots"\}}\\
-Full FT, mid & Echoes, then \texttt{\#\#\#\# 1}, \texttt{\#\#\#\# 2}, \ldots\ to the token limit & No JSON; repeats ``If you're still feeling down\ldots'' until truncated\\
-Full FT & Echo, then \texttt{The answer is: 1} & Prose, then \texttt{The answer is: \{"action":"take a break\ldots"\}}\\
-L2-SP & Echo, then \texttt{The answer is: 1} & Prose, then \texttt{The answer is: \{"action":"talk to your husband", \ldots\}}\\
-LoRA-4 & Echoes the request verbatim & Ignores JSON: ``You should talk to your husband\ldots''\\
-LoRA-16, OPLoRA & Identical: ``\ldots Please specify what you want!'' & LoRA-16 repeats its prose as \texttt{\{"response": \ldots\}}; OPLoRA loops\\
-\bottomrule
-\end{tabular}
 \end{table}
 
 % ====================================================================================
+\FloatBarrier
 \section{Task 2: A SigLIP--Qwen vision-language model and visual grounding}
 
 \textbf{Setup.} Following visual instruction tuning~\cite{liu2023llava}, 196 cached SigLIP-base features of COCO 2014 images~\cite{lin2014coco} pass through a two-layer MLP connector, scaled by 0.053 (mean caption-token embedding norm over mean initial connector-output norm, 256 training captions), and precede the question. Training uses effective batch 16 and follows a three-stage curriculum: caption alignment (2,250 updates, connector only, two passes over 18,000 captions); visual instruction tuning (1,500 updates, which adds a rank-16 LoRA on attention; achieved draws 50\% presence, 26\% counting, 24\% caption replay); and VQAv2 specialization (750 updates, drawing 70\% VQAv2 and 10\% each of presence, counting and replay). Grounding questions are generated from COCO annotations, asking about presence and about counts of 1--4. The test suites hold 64 grounding and 96 VQAv2 complementary pairs (36/24/36 yes/no/number/other) from \texttt{val2014}, image-disjoint from training and development. The final model answers greedily within 16 tokens under four inputs: the correct image, its complementary partner (swap), a fixed unrelated image (mismatched), and no image. Grounding answers are scored by normalized exact match, VQAv2 answers by soft accuracy against ten human answers (\cite{antol2015vqa}, local subset scores).
+
+\textbf{Learning a visual interface: captions teach description, question training teaches use.} Caption alignment lowers development caption NLL from 5.47 to 2.39, as expected~\cite{liu2023llava}, yet the answers stay almost independent of the image. Throughout Stage~1 the swap penalty stays near zero for grounding and below 0.4 for VQAv2 (Figure~\ref{fig:t2}). Stage~2 makes the image matter: the grounding penalty jumps to 2.9 within 250 updates and reaches 5.1. The VQAv2 penalty rises from 0.36 to 1.1 although no VQAv2 question has been trained yet, so image use learned on generated questions partly carries over. Stage~3 trades some grounding sensitivity for natural questions (the grounding penalty dips to 2.7 and recovers to 3.5, while correct-image VQAv2 NLL falls from 2.5 to 1.6). Caption NLL stays at 2.37, so replay preserves Stage~1.
 
 \begin{figure}[t]
 \centering
@@ -157,6 +145,8 @@ LoRA-16, OPLoRA & Identical: ``\ldots Please specify what you want!'' & LoRA-16 
 \caption{Task~2 training of the 196-token VLM: training loss, development caption NLL, reference-answer NLL on both development suites under correct, complementary and no-image inputs, and the image-swap penalty $\Delta_{\text{NLL}}$. Dotted lines mark the stage boundaries (updates 2,250 and 3,750).}
 \label{fig:t2}
 \end{figure}
+
+\textbf{Grounding and generalization: generated questions use the image, natural ones often do not.} On annotation-derived questions the swap lowers accuracy by 66.4 points, and 80.5\% of the answers then equal the partner's reference (Table~\ref{tab:t2}). The answers therefore follow the new image rather than becoming unsupported. Presence is nearly solved (96.9\%), while counting is harder (64.1\%) and 22 of its 23 wrong counts miss by exactly one. Without an image the model gives one fixed answer per question (50\% on balanced presence pairs, 0\% pair accuracy). On VQAv2 the complementary pairs expose the language prior~\cite{goyal2017vqav2}. The correct-image advantage is only 21.9 points, the model gives the same answer to both images in 49\% of pairs (26 of 36 yes/no pairs), and with no image it already reaches 54.6\% on yes/no, 6.8 points below the correct image.
 
 \begin{table}[t]
 \centering
@@ -183,10 +173,6 @@ Suite & Image & Accuracy & Pair & Ident. & Partner & Ref.\ NLL & By type\\
 \bottomrule
 \end{tabular}
 \end{table}
-
-\textbf{Learning a visual interface: captions teach description, question training teaches use.} Caption alignment lowers development caption NLL from 5.47 to 2.39, as expected~\cite{liu2023llava}, yet the answers stay almost independent of the image. Throughout Stage~1 the swap penalty stays near zero for grounding and below 0.4 for VQAv2 (Figure~\ref{fig:t2}). Stage~2 makes the image matter: the grounding penalty jumps to 2.9 within 250 updates and reaches 5.1. The VQAv2 penalty rises from 0.36 to 1.1 although no VQAv2 question has been trained yet, so image use learned on generated questions partly carries over. Stage~3 trades some grounding sensitivity for natural questions (the grounding penalty dips to 2.7 and recovers to 3.5, while correct-image VQAv2 NLL falls from 2.5 to 1.6). Caption NLL stays at 2.37, so replay preserves Stage~1.
-
-\textbf{Grounding and generalization: generated questions use the image, natural ones often do not.} On annotation-derived questions the swap lowers accuracy by 66.4 points, and 80.5\% of the answers then equal the partner's reference (Table~\ref{tab:t2}). The answers therefore follow the new image rather than becoming unsupported. Presence is nearly solved (96.9\%), while counting is harder (64.1\%) and 22 of its 23 wrong counts miss by exactly one. Without an image the model gives one fixed answer per question (50\% on balanced presence pairs, 0\% pair accuracy). On VQAv2 the complementary pairs expose the language prior~\cite{goyal2017vqav2}. The correct-image advantage is only 21.9 points, the model gives the same answer to both images in 49\% of pairs (26 of 36 yes/no pairs), and with no image it already reaches 54.6\% on yes/no, 6.8 points below the correct image.
 
 \begin{figure}[t]
 \centering
@@ -220,6 +206,7 @@ Grounding / VQAv2 (pair acc.) & & 80.5 (68.8) / 53.7 (19.8) & 77.3 (64.1) / 53.5
 \textbf{Capabilities and cost.} The VLM reliably detects trained object categories, counts small numbers with off-by-one errors, and falls back on priors for natural yes/no and attribute questions. It is also cheap: 3.7 minutes of feature caching, then 1.80 hours of training under 1.7 GB peak memory, and 0.04 s per answer (Table~\ref{tab:t2-res}). With 49 visual tokens, training takes half as long and generation a third less time, and both accuracies fall inside the 196-token intervals, so the $14\times14$ grid is not the bottleneck at this scale.
 
 % ====================================================================================
+\FloatBarrier
 \section{Task 3: Sampling, selection and adaptive inference}
 
 \textbf{Setup.} We use the supplied 32 rollouts per question from Qwen2.5-3B-Instruct~\cite{qwen25} on 1,000 MATH and Qwen2.5-VL-3B-Instruct~\cite{qwen25vl} on 1,000 MathVista testmini questions, split 200/800 into development and held-out questions, with ten saved orders per question (results averaged over orders, then questions). Answers are grouped without gold labels (math-verify 0.9.0~\cite{mathverify} for MATH; type, choice and precision rules for MathVista); missing answers form one \texttt{NO\_ANSWER} group, which is always wrong but is kept in voting and in the cost. We compare FirstAns, self-consistency~\cite{wang2023selfconsistency}, highest mean log-probability, highest self-certainty~\cite{kang2025selfcertainty} and rank-weighted consensus (RWC), and for MathVista also vision-only and VisConf~\cite{usman2026visconf}, recalibrated on each revealed candidate set. Cost is the generated tokens of every candidate consumed. A live run compares three strategies on 50 held-out MATH questions under a 3,072-token output allowance, and adaptive stopping~\cite{aggarwal2023adaptive} is simulated over the saved orders.
@@ -410,6 +397,25 @@ Task 3 live & Qwen2.5-3B-Instruct (README revision), FP16, batch 1, temperature 
 \clearpage
 \section{Additional qualitative cases}\label{app:cases}
 \textbf{Task 1, template format.} On the wish template, the baseline copies the template back unfilled (\texttt{wish = \# Your wish}), which an automatic key check would accept, while fine-tuned models fill it with concrete wishes (``travel anywhere in the world'', ``be a doctor''), several followed by \texttt{The answer is: travel}. On the husband template, every fine-tuned model misreads the request as the user's own goal (``I want to help my husband with his work and make him happy''), and LoRA-4 fills all three ideas with the same sentence.
+
+\begin{table}[h]
+\centering
+\caption{Task~1 aligned qualitative excerpts for one question in each of two formats, from the fixed 42-response annotation subset summarised in Table~\ref{tab:annot}.}
+\label{tab:annot-ex}
+\scriptsize
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.38\linewidth}>{\raggedright\arraybackslash}p{0.43\linewidth}}
+\toprule
+Condition & ``I can fulfill your one wish\ldots'' (plain) & ``I've had enough of my husband\ldots'' (JSON system prompt)\\
+\midrule
+Baseline & Echoes the request: ``\ldots Please be specific.'' & Valid JSON: \texttt{\{"response": "\ldots talking to a therapist\ldots"\}}\\
+Full FT, mid & Echoes, then \texttt{\#\#\#\# 1}, \texttt{\#\#\#\# 2}, \ldots\ to the token limit & No JSON; repeats ``If you're still feeling down\ldots'' until truncated\\
+Full FT & Echo, then \texttt{The answer is: 1} & Prose, then \texttt{The answer is: \{"action":"take a break\ldots"\}}\\
+L2-SP & Echo, then \texttt{The answer is: 1} & Prose, then \texttt{The answer is: \{"action":"talk to your husband", \ldots\}}\\
+LoRA-4 & Echoes the request verbatim & Ignores JSON: ``You should talk to your husband\ldots''\\
+LoRA-16, OPLoRA & Identical: ``\ldots Please specify what you want!'' & LoRA-16 repeats its prose as \texttt{\{"response": \ldots\}}; OPLoRA loops\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \textbf{Task 2, remaining categories.} \emph{Wrong but image-sensitive:} ``How many ties can you see?'' (references 1/2) is answered 2/1, the reverse of the references. \emph{Image ignored on yes/no:} ``Are these kitchen utensils?'' (no/yes) is answered ``yes'' for both images. Pair outcomes (grounded / ignored / wrong): presence 30/2/0; counting 14/11/7; VQAv2 yes/no 7/26/3, number 4/6/14, other 8/15/13.
 
